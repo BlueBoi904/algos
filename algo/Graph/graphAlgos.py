@@ -27,3 +27,13 @@ def breathFirstPrint(graph, source):
         print(curr)
         for neighbor in graph[curr]:
             queue.append(curr)
+
+
+# hasPath
+def hasPath(graph, src, dst):
+    if src == dst:
+        return True
+    for item in graph[src]:
+        if hasPath(graph, item, dst) == True:
+            return True
+    return False
