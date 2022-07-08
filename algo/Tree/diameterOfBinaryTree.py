@@ -11,5 +11,15 @@ The length of a path between two nodes is represented by the number of edges bet
 """
 
 
-def diameterOfBinaryTree():
-    pass
+def diameterOfBinaryTree(self, root):
+    res = 0
+
+    def depth(n):
+        if not n:
+            return 0
+        left, right = depth(n.left), depth(n.right)
+        res = max(res, left+right)
+        return 1 + max(left, right)
+
+    depth(root)
+    return res
