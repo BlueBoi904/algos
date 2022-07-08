@@ -17,8 +17,7 @@ Output: "10101"
 
 
 def addBinary(a, b):
-
-    output = int(a) + int(b)
+    output = int(a, 2) + int(b, 2)
     return "{:b}".format(output)
 
 
