@@ -21,7 +21,6 @@ Output: true
 
 def containsDuplicate(nums):
     set = {"{nums[0]}"}
-    print(set)
     for num in nums:
         if num in set:
             return True
